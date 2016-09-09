@@ -32,6 +32,7 @@
 	  <li><a href="index.html">Overview</a></li>
 	  <li class="current"><a href="challenge.html">Design Challenge</a></li>
 	  <li><a href="participate.html">How to Participate</a></li>
+	  <li><a href="data.html">Data</a></li>
 	  <li><a href="schedule.html">Schedule</a></li>
 	  <li><a href="organizers.html">Organizers</a></li>
 	</ul>
@@ -52,82 +53,79 @@
 		  <header>
 		    <h2>Design Challenge</h2>
 		    <ul class="meta">
-		      <li class="icon fa-clock-o">August 22 2016</li>
+		      <li class="icon fa-clock-o">September 9 2016</li>
 		    </ul>
 		  </header>
 
 		  <section>
-		    <p>In the following, we briefly summarize the design challenge. The full set of official rules will are available through the following link.</p><p> <a href="images/rules.pdf" class="button">Official Rules Document</a></p>
+		    <p>In the following, we briefly summarize the design challenge. The full set of official rules will are available through the following link. </p><p> <a href="images/rules.pdf" class="button">Official Rules Document</a></p>
 		    <h3>Problem Setting</h3>		    
 		    <p>
 		      C-Town Public Utility (CPU) is the main water
 		      distribution system operator of C-Town
-		      (Fig. 1). For many years, CPU has operated a
-		      fixed distribution network topology.  In the
+		      (Figure 1). For many years, CPU has
+		      operated a static distribution topology. In the
 		      last year, CPU has introduced novel smart
 		      technology to enable remote data collection from
 		      sensors in the field, and remote control of
-		      actuators.  Several months after that new
-		      technology has been introduced, a major overflow
-		      in Tank T1 occurred. Shortly after, anomalous
-		      low levels in Tank T5 were noticed.  While CPU
-		      personnel at SCADA were able see the anomalous
-		      readings for the latter episode, Tank T1
-		      overflow took place unexpectedly while the T1
-		      water level readings were always below the alarm
-		      thresholds. Searching for the causes, CPU
-		      engineers suspect potential cyber-attacks for
-		      both episodes.  In particular, they are
-		      considering adversary profiles that are able to
-		      activate and deactivate the actuators in C-Town,
-		      as well as altering the readings of the sensors
-		      deployed in the network and interfering with the
-		      connections established between networked
-		      components.
+		      actuators. Shortly after that new technology has
+		      been introduced, anomalous low levels in Tank T5
+		      and high levels in Tank T1 were observed. A
+		      month later, a water overflow in Tank T1
+		      occurred. While CPU personnel at the control
+		      center were able to see the anomalous readings
+		      for the first two episodes, Tank T1 overflow
+		      took place unexpectedly while the water level
+		      readings were always below the alarm thresholds
+		      and pumping operations appeared to be
+		      normal. Searching for the causes, CPU engineers
+		      suspect potential cyber-attacks for all these
+		      episodes. In particular, they are considering
+		      adversaries that are able to activate and
+		      deactivate the actuators in C-Town, as well as
+		      altering the readings of the sensors deployed in
+		      the network and the reported status of
+		      actuators, and interfering with the connections
+		      established between networked components. The
+		      participants' task is thus to develop an online
+		      alert system for cyber-physical attacks.
 		    </p>
-		    <span class="image featured"><figure><img src="images/fig1.png" alt="" />   <figcaption>Figure 1. C-Town network topology used in challenge.</figcaption></figure></span>
-		    
-		  </section>
-
-		  <section>
-		    <h3>Development data</h3>
-		    <p>
-		      CPU will provide the participants with the following data.
-		      <ul class="fa-ul">
-			<li><i class="fa-li fa fa-square"></i>C-Town model in EPANET input format.  Short description of C
-			  -Town with PLCs?</li>
-			<li><i class="fa-li fa fa-square"></i>Historical data for the last two years before the smart devices were introduced.
-			  <ul  class="fa-ul">
-			    <li><i class="fa-li fa fa-square"></i>The data is taken hourly, and provided in monthly intervals</li>
-			    <li><i class="fa-li fa fa-square"></i>The first two years of data are guaranteed to be without attacks</li>
-			    <li><i class="fa-li fa fa-square"></i>This data can be used to derive parameters related to normal system operations</li>
-			  </ul>
-			</li>
-			<li><i class="fa-li fa fa-square"></i>Historical data for several months since the smart devices were introduced
-			  <ul class="fa-ul">
-			    <li><i class="fa-li fa fa-square"></i>The data is taken hourly, and provided in monthly intervals</li>
-			    <li><i class="fa-li fa fa-square"></i>The data is not guaranteed to be without attacks</li>
-			  </ul>
-			</li>
-			<li><i class="fa-li fa fa-square"></i>Historical data for the last month, which includes the suspected attack that caused a tank overflow</li>
-		      </ul>
-		    </p>
+		    <span class="image featured"><figure><img src="images/fig1.png" alt="" />   <figcaption>Figure 1: Graphical representation of C-Town water distribution system..</figcaption></figure></span>
+		   
+ <p> <a href="data.html" class="button">Datasets</a></p>
 		  </section>
 
 		  <section>
 		    <h3>Goal of the attack detection algorithms</h3>
 		    <p>
-		      The  primary  goal  of  the  detection  mechanism  is  to  reliably detect  the  presence  of  an  ongoing attack. Give technical details here ...
+The primary goal of the detection mechanism is to reliably detect the
+presence of an ongoing attack from the SCADA readings, and to do so in
+the shortest amount of time. In addition, the algorithm should avoid
+false alarms and recognize when the threat is no longer in place. Due
+to the distributed nature of the WDS, an ideal detection mechanism
+should also be able to identify which components of the physical
+network are being attacked in order to facilitate and hasten incident
+resolution. Furthermore, the inherent interdependence of the elements
+in the water network should theoretically allow for the detection of
+anomalies even when the adversary tries to conceal his actions by
+altering the SCADA readings of one or a few deployed sensors. The
+control system will operate in the control room, based on the
+available SCADA data. Further information is detailed in the rules document.
 		    </p>
 		  </section>
 		  <section>
 		    <h3>Test data and evaluation criteria</h3>
 		    <p>
-		      A testing  dataset  will be  made available  for a  short time window,  during  which the participants are required to test their algorithms and submit  a detection report (see below for further details).  
-		      The test dataset will contain attack types  that  may diff
-		      er from those of the  development  dataset.
-		      All algorithms will be then compared according to the following
-		      set of evaluation criteria.
+A test dataset will be made available for a short time window
+(<a href="schedule.html">see schedule</a>), during which the
+participants are required to run their algorithms and submit a
+detection report (see rules document for further details). The test
+dataset will contain a few months of data and contain attack instances
+that may differ from those of the development dataset. All algorithms
+will then be compared by adopting quantitative criteria based on the
+time-to-detection and events classification (confusion matrix), as
+outlined below.
+
 		    </p>
 		  </section>
 

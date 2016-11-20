@@ -31,9 +31,10 @@
 	<ul>
 	  <li><a href="index.html">Overview</a></li>
 	  <li><a href="challenge.html">Design Challenge</a></li>
-	  <li class="current"><a href="participate.html">How to Participate</a></li>
+	  <li><a href="participate.html">How to Participate</a></li>
 	  <li><a href="data.html">Data</a></li>
 	  <li><a href="schedule.html">Schedule</a></li>
+	  <li class="current"><a href="faq.html">FAQ</a></li>
 	  <li><a href="organizers.html">Organizers</a></li>
 	</ul>
       </nav>
@@ -58,18 +59,25 @@
 		  <section>
 		    <p>
 
-		      Q. To identify the attacks, can we use all the data provided by EPA Net simulation (demands, pressures, levels, of all elements provided by simulation), or we need to only use data from the sensors reported in datasets (Tanks 1 to 7, Pumps 1 to 11, Valve 2, and pressure nodes J280, J269, etc…)?<br>
-		      A. The sensors deployed in C-Town are only those in the question above (reported in the columns of the datasets). It is possible to retrieve insights on the system by running simulations with EPANET, but beware that the demand patterns provided with the “.inp” file are only week-long instances obtained from the distributions we use to generate the demands. The values of the demands used to generate the available BATADAL datasets are not given.
+		      Q: To identify the attacks, can we use all the data provided by EPA Net simulation (demands, pressures, levels, of all elements provided by simulation), or we need to only use data from the sensors reported in datasets (Tanks 1 to 7, Pumps 1 to 11, Valve 2, and pressure nodes J280, J269, etc…)?<br>
+		      A: The sensors deployed in C-Town are only those in the question above (reported in the columns of the datasets). It is possible to retrieve insights on the system by running simulations with EPANET, but beware that the demand patterns provided with the “.inp” file are different from those used to generate the BATADAL dataset. The values of the demands used to generate the available BATADAL datasets are not given.
 		    </p>
 		    <p>
-		      Q. Is it possible to assume that the potentially attacked measurements coming from the sensors will be given to the algorithm to test for existence of an attack? Or do we have to simulate the actual measurements from the EPA net model?<br>
-		      A. Since the demand patterns used in the simulations are not given, it is not possible to estimate the actual measurements from EPANET and compare them against those we provide to check for anomalies. Participants are asked to use the data regarding “normal operations” (dataset01) and the information on the “.inp” file (network, control logic of the actuators, …) to develop an understanding of the system and produce a detection algorithm.
+		      Q: Is it possible to assume that the potentially attacked measurements coming from the sensors will be given to the algorithm to test for existence of an attack? Or do we have to simulate the actual measurements from the EPA net model?<br>
+		      A: Since the demand patterns used in the simulations are not given, it is not possible to estimate the actual measurements from EPANET and compare them against those we provide to check for anomalies. Participants are asked to use the data regarding “normal operations” (dataset01) and the information on the “.inp” file (network, control logic of the actuators, …) to develop an understanding of the system and produce a detection algorithm.
 		    </p>
 		    <p>
-		      Q. Is the water distribution system that will be given in February 20 be a different one from C-Town?<br>
-		      A. We will be using C-Town. Apart from the demand patterns, the .inp map will be equal to the one provided in the BATADAL website.
+		      Q: Is the water distribution system that will be given in February 20 be a different one from C-Town?<br>
+		      A: We will be using C-Town. Apart from the demand patterns, the .inp map will be equal to the one provided in the BATADAL website.
 		     
 		    </p>
+		    <p>Q: I'm not able to put all my team-mates as Authors. What should I do?<br>
+		      A: You can add your team-mates as Co-Authors. The author is the single corresponding author, you can include as many Co-Authors as you want.</p><p>
+		      Q: Does the BATAL competition have anything to do with the "Student Competition"?<br>
+		      A: No, and BATADAL contributions cannot be evaluated as part of the student competition.</p>
+		    <p>
+		      Q: I cannot find any information about the units of measure represented in the data files. Can you point me to that info?<br>
+		    A: The flow is in LPS. Pressures and water levels are in meters.</p>
 		  </section>
 		  
 		</article>

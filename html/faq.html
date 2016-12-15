@@ -52,16 +52,31 @@
 		  <header>
 		    <h2>Frequently Asked Questions</h2>
 		    <ul class="meta">
-		      <li class="icon fa-clock-o">21 November 2016</li>
+		      <li class="icon fa-clock-o">14 December 2016</li>
 		    </ul>
 		  </header>
 
+		  
 		  <section>
+		    <p>Q: In the datasets you refer to V2 while in the rules files Figure 1 - V1 is part of PLC3 and V2 is not connected to any of the PLCs. Please clarify.
+
+
+
+		    <br>A: There is a mismatch between the BATADAL rules and the ‘.inp’ file regarding the labeling of all the valves. V2 is the only actuated valve in C-Town map and is the one connected to PLC3. Readings are available only for this valve. V2 is erroneously named V1 in the rules file.</p>
+		    <p>Q:  Do we know which sensor/actuator is being attacked for data labelled as ‘Attack’ in Dataset 4 ? This information was provided on the BATADAL website for Dataset 2.
+
+
+
+		    <br>A: The attack on September 14th and 15th was identified due to pump control inconsistencies in PU10 and PU11. The attacks lasting from October 9th to October 11th, and from October 30th to November 1st, were discovered  due to pump PU2 control inconsistencies. The attack on November 27th was directed at PU7, while the abnormal operations from December 6th to December 9th were identified due to pump control inconsistencies in PU6 and PU7. Remember that there might be other undiscovered attacks in Dataset 4.</p>
 		    <p>
+		    Q: Are Dataset 1 and 2 still relevant after the release of Datataset 3 and 4?		    <br>A: The test dataset that will be released in February will be generated using similar demand patterns to those employed for Dataset 3 and Dataset 4. That said, Dataset 1 and 2 may still be relevant-depending on the approach you are adopting to develop the detection algorithm.
+		    </p>
+
+<!--		    <p>
 
 		      Q: Are dataset01 and 02 are still valid? Or would they be replaced completely by dataset03 and the other data you will be releasing in November?
 		      <br>A: Dataset03 and the following datasets will feature more realistic demand patterns. Therefore, if your algorithm works by relying on demand modeling and prediction, then you should disregard the previous datasets and use Dataset03 and the data that will be released in the future. On the other hand, if your detection mechanism is not based on demands then you could theoretically continue to use dataset01 and dataset02.
-		      </p>
+		      </p>-->
 		    <p>
 
 		      Q: To identify the attacks, can we use all the data provided by EPA Net simulation (demands, pressures, levels, of all elements provided by simulation), or we need to only use data from the sensors reported in datasets (Tanks 1 to 7, Pumps 1 to 11, Valve 2, and pressure nodes J280, J269, etc…)?<br>

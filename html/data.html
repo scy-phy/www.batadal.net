@@ -70,28 +70,61 @@
 		    <h3>Development data</h3>
 		    <p>
 
-		      The following data on historical SCADA operations are provided.
+		      The following data on hourly historical SCADA operations are provided:
 		      <ul class="fa-ul">
-			<li><i class="fa-li fa fa-square"></i>First set: Data from six months preceding the installation of the smart devices (September 2015 to February 2016). These data are guaranteed to be without attacks and can be used to study the normal system operations. (Data availability: September 9, 2016.)</li>
+			<!-- <li><i class="fa-li fa fa-square"></i>First set: Data from six months preceding the installation of the smart devices (September 2015 to February 2016). These data are guaranteed to be without attacks and can be used to study the normal system operations. (Data availability: September 9, 2016.)</li>
 			<li><i class="fa-li fa fa-square"></i>Second set: A few months of data following the installation of the smart devices (April to June 2016). This dataset contains the attacks causing anomalous low levels in T5 (13-18 May) and high levels in T1 (21-22 May). CPU engineers were able to discover these attacks and label them properly. The last month includes the attack that caused Tank T1 to overflow. The engineers were able to label the attack only when the overflow occurred (22-23 June). They also suspect that other attacks might be contained in the remaining data of this second dataset. (Data availability: September 9, 2016.) Additional data may be released after the abstract submission (October 2, 2016).
+			</li> -->
+			<li><i class="fa-li fa fa-square"></i>Training Dataset 1: This dataset was released on November 20 2016, and it was generated from a one-year long simulation. The dataset does not contain any attacks, i.e. all the data pertains to C-Town normal operations.
 			</li>
-			<li><i class="fa-li fa fa-square"></i>Training set 3: This dataset with unlabeled data will be released on November 20 2016. The dataset does not contain attacks and it was generated with a one-year simulation. It is thus similar to Dataset 1 - the only difference stands in the water demand patterns, which have been modified slightly. Please use this dataset as you develop your attack identification algorithms.
+			<li><i class="fa-li fa fa-square"></i>Training Dataset 2: This dataset with partially labeled data was released on November 28 2016. The dataset is around 6 months long and contains several attacks, some of which are approximately labeled.   
 			</li>
-			<li><i class="fa-li fa fa-square"></i>Training set 4: This dataset with partially labeled data was released November 28 2016. The dataset does contain several attacks, with some of them approximately labeled. It was generated with a one-year simulation, with the same demand patterns used for Dataset 3.  
-			</li>
-			<li><i class="fa-li fa fa-square"></i>Test set: This dataset with unlabeled data will be released on February 20 2017. It will be used to quantitatively compare the performance of the algorithms (see rules document for details).
+			<li><i class="fa-li fa fa-square"></i>Test Dataset: This 3-months long dataset contains several attacks but no labels. The dataset was released on February 20 2017, and it is used to compare the performance of the algorithms (see rules document for details).
 			</li>
 		      </ul>
 		      Note: the flow data unit is LPS, pressure and water level units are meters.
 		    </p>
 		    
 		    <p> <a href="data/CTOWN.INP" class="button">C-Town .inp file for EPANET</a></p>
-		    <p> <a href="data/BATADAL_dataset01.csv" class="button">Dataset 1 (no attacks)</a></p>
-		    <p><a href="data/BATADAL_dataset02.csv" class="button">Dataset 2 (attacks)</a></p>
-		    <p><a href="data/BATADAL_dataset03.csv" class="button">Dataset 3 (training/no attacks)</a></p>
-		    <p><a href="data/BATADAL_dataset04.csv" class="button">Dataset 4 (training/attacks)</a></p>
-		    <p><a href="data/BATADAL_test_dataset.zip" class="button">Dataset 5 (test)</a></p>
+		    <p><a href="data/BATADAL_dataset03.csv" class="button">Training Dataset 1</a></p>
+		    <p><a href="data/BATADAL_dataset04.csv" class="button">Training Dataset 2</a> <a href="images/Attacks_TrainingDataset2.png" class="button">List of attacks in Training Dataset 2</a></p>
+		    <p><a href="data/BATADAL_test_dataset.zip" class="button">Test Dataset</a> <a href="images/Attacks_TestDataset.png" class="button">List of attacks in Test Dataset</a></p>
+
+
+		    <h5>Reference</h5>
+		    If you are using the datasets in your work, please cite the following paper as reference:
+		    <p>Riccardo Taormina and Stefano Galelli and Nils
+		      Ole Tippenhauer and Elad Salomons and Avi
+		      Ostfeld and Demetrios G. Eliades and Mohsen
+		      Aghashahi and Raanju Sundararajan and Mohsen
+		      Pourahmadi and M. Katherine Banks and
+		      B. M. Brentan and Enrique Campbell and G. Lima
+		      and D. Manzi and D. Ayala-Cabrera and M. Herrera
+		      and I. Montalvo and J. Izquierdo and
+		      E. Luvizotto and Sarin E. Chandy and Amin Rasekh
+		      and Zachary A. Barker and Bruce Campbell and
+		      M. Ehsan Shafiee and Marcio Giacomoni and
+		      Nikolaos Gatsis and Ahmad Taha and Ahmed
+		      A. Abokifa and Kelsey Haddad and Cynthia S. Lo
+		      and Pratim Biswas and M. Fayzul K. Pasha and
+		      Bijay Kc and Saravanakumar Lakshmanan
+		      Somasundaram and Mashor Housh and Ziv Ohar; "The
+		      Battle Of The Attack Detection Algorithms:
+		      Disclosing Cyber Attacks On Water Distribution
+		      Networks." Journal of Water Resources Planning
+		      and Management, 144 (8), August
+		      2018. (<a href=http://dx.doi.org/10.1061/(ASCE)WR.1943-5452.0000969>doi
+		      link</a>, <a href=taormina18battle.bib>bib</a>)</p>
+
 		    
+		  </section>
+		  <section>
+		    <h3>Other data</h3>
+		    <p>
+Two additional datasets were originally included in the BATADAL competition. These datasets, formerly known as Dataset 1 and Dataset 2, were eventually removed as they were generated with demand patterns that differed from those featured in the test dataset.
+		    </p>
+		    <p> <a href="data/BATADAL_dataset01.csv" class="button">Old Dataset 1 (obsolete)</a></p>
+		    <p><a href="data/BATADAL_dataset02.csv" class="button">Old Dataset 2 (obsolete)</a></p>		    
 		  </section>
 		</article>
 
